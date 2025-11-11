@@ -1,0 +1,13 @@
+#include <stdio.h>
+#define MAX 100
+#define PI 3.141592
+#define STRING "Hello C"
+#define OUTPUT printf
+#define DATA int
+
+int main(){
+   DATA a = 3;
+    OUTPUT("%d, %lf, %s, %d\n", MAX, PI, STRING, a);
+    return 0;
+}
+
