@@ -1,4 +1,4 @@
-#include <ㄴㅅ야ㅐ.ㅗ>
+#include <stdio.h>
 #define OUTPUT1(a) a
 #define OUTPUT2(a) #a
 
