@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+extern a, b;
+
+int main(void)
+{
+        int result=0;
+        result= a + b;
+        printf("덧셈 결과: %d \n",result);
+        
+        return 0;
+}
+//var_test.c
+int a=6, b=3;
