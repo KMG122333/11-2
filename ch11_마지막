@@ -1,0 +1,50 @@
+#include <iostream>
+#include <iomanip>  // 추가
+#define MONEY 500000
+
+using namespace std;
+
+int main() {
+    char yn;
+    int year;
+    double gpa1 = 0, gpa2 = 0, avg = 0, scholarship = 0;
+
+    cout << "당신은 한국공학대 재학중입니까? (y/n): ";
+    cin >> yn;
+
+    if (yn == 'n' || yn == 'N') {
+        cout << "장학금 지급대상이 아닙니다.\n";
+        return 0;
+    }
+
+    cout << "몇 학년입니까? (1~4): ";
+    cin >> year;
+
+    if (year >= 3) {
+        cout << "3학년 이상은 장학금 지급대상이 아닙니다.\n";
+        return 0;
+    }
+
+    if (year == 1) {
+        cout << "1학년 평점 입력: ";
+        cin >> gpa1;
+        avg = gpa1;
+    } else if (year == 2) {
+        cout << "1학년 평점 입력: ";
+        cin >> gpa1;
+        cout << "2학년 평점 입력: ";
+        cin >> gpa2;
+        avg = (gpa1 + gpa2) / 2.0;
+    }
+
+    if (avg < 4.1) {
+        cout << "평균학점이 4.1 미만으로 장학금을 받을 수 없습니다.\n";
+    } else {
+        scholarship = avg * MONEY;
+        cout << fixed << setprecision(0); // 💡 정수형식 출력
+        cout << "평균학점: " << avg << endl;
+        cout << "장학금: " << scholarship << "원 지급됩니다.\n";
+    }
+
+    return 0;
+}
