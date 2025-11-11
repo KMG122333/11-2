@@ -1,0 +1,20 @@
+//main.c
+#include <stdio.h>
+
+extern num1, num2;
+extern add(int a, int b);
+int main(void)
+{
+        add(num1, num2);            // 함수 호출
+        
+        return 0;
+}
+//var_test.c
+#include <stdio.h>
+    
+int num1=10, num2=20;    // 전역 변수 선언
+    
+void add(int a, int b)      // 함수 정의
+{
+        printf("덧셈 연산: %d \n", a + b);
+}
