@@ -1,0 +1,8 @@
+#include <stdio.h>
+#define MAX 100
+
+int main(int argc, char *argv[]){
+    int i = MAX;
+    printf("i : %d MAX : %d\n", MAX);
+    return 0;
+}
